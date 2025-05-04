@@ -3,6 +3,8 @@
  * Do not include SCSS code in this file.
  */
 
+@layer reset, bootstrap, base, components, utilities;
+
 /**
  * Import variables
  */
@@ -15,6 +17,7 @@
  * see commented examples below
  */
 
+
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
@@ -22,9 +25,20 @@
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
-
-@import "layouts/home";
-
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+@import "layout/header";
+@import "layout/footer";
+@import "components/button";
+@import "components/card";
+@import "pages/home";
+@import "pages/participants";
+@import "pages/noticia";
+@import "pages/inscripcio";
+ 
 /**
  * Do NOT include anything else in this file!
  */

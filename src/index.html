@@ -5,23 +5,51 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Jornades d’Economia Circular</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
+    <main class="poster">
+      <div class="poster__grid">
+    
+        <div class="poster__logo">
+          <img src="assets/images/logo_jornades-blanc.svg" alt="Logo Jornades">
+        </div>
+    
+        <nav class="poster__nav">
+          <a href="./participants.html">Participants</a>
+          <a href="./noticia.html">Notícia</a>
+          <a href="./inscripcio.html">Inscripció</a>
+        </nav>
+    
+        <div class="poster__overlay">
+          <h1 class="poster__title">Jornades d’Economia Circular 2025</h1>
+          <p class="poster__date">Del 10 al 12 de juny</p>
+          <p class="poster__location">Centre Cívic de la Ribera</p>
+    
+          <div class="poster__buttons">
+            <button class="poster__btn shine">Tallers pràctics</button>
+            <button class="poster__btn shine">Xerrades inspiradores</button>
+            <button class="poster__btn shine">Economia circular</button>
+            <button class="poster__btn shine">Innovació sostenible</button>
+          </div>
+    
+          <div class="poster__contact">
+            <div class="poster__contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <p>economiacircular@estem-verds.cat</p>
+            </div>
+            <div class="poster__contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <p>666 123 456</p>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </main>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>

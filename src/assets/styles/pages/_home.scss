@@ -1,0 +1,141 @@
+@layer components {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .poster {
+    align-items: center;
+    background-image: url("../images/forest.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+
+    &__grid {
+      background-color: rgb(0 0 0 / 50%); 
+      border-radius: 1rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 1100px;
+      padding: 2rem;
+      width: 100%;
+
+      @supports (display: grid) {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto auto auto auto auto auto;
+
+        .poster__logo {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+          place-self: center start;
+
+          img {
+            max-width: 200px;
+          }
+        }
+
+        .poster__nav {
+          display: flex;
+          gap: 1rem;
+          grid-column: 3 / 6;
+          grid-row: 1 / 2;
+          justify-self: end;
+
+          a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .poster__overlay {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          grid-column: 1 / 6;
+          grid-row: 3 / 6;
+          text-align: center;
+
+          h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+          }
+
+          .poster__date, .poster__location {
+            font-size: 1.5rem;
+          }
+
+          .poster__buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+          }
+
+          .poster__btn {
+            all: unset;
+            background: $corporate;
+            border: none;
+            border-radius: 50px;
+            color: #fff;
+            cursor: default;
+            display: inline-block;
+            font-weight: 400;
+            min-width: 180px;
+            padding: 2rem 3rem;
+          }
+
+          .poster__contact {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            gap: 2rem;
+            justify-content: center;
+
+            .poster__contact-item {
+              align-items: center;
+              display: flex;
+              gap: 0.5rem;
+
+              i {
+                color: $primary;
+              }
+
+              p {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      @supports not (display: grid) {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      @container (min-width: 700px) {
+        .poster__btn {
+          font-size: 1.1rem;
+        }
+
+        .poster__overlay {
+          padding: 1rem 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.site-header {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+  position: relative;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  &__logo-img {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+
+  &__title {
+    color: $corporate;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__nav {
+    display: none; 
+
+    &.is-active {
+      background-color: white;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+      display: block;
+      padding: 1rem;
+      position: absolute;
+      right: 1rem;
+      top: 100%;
+      z-index: 100;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item a {
+    color: $corporate;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__toggle {
+    background: none;
+    border: none;
+    color: $corporate;
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  @media (width >= 1024px) {
+    &__toggle {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+    }
+  }
+}

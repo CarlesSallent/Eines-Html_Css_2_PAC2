@@ -1,0 +1,71 @@
+.participants {
+  padding: 2rem 1rem;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+
+  &__title {
+    color: $primary;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+    @container (width > 600px) {
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+  }
+
+  &__note {
+    color: $corporate;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+.participant-card {
+  background-color: $bg;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow;
+  flex: 1 1 300px;
+  max-width: 320px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__photo {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    height: 150px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    width: 150px;
+  }
+
+  &__name {
+    color: $dark;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &__desc {
+    color: $dark;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
+}

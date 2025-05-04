@@ -1,0 +1,69 @@
+
+.contact {
+  background-color: color(display-p3 0.97 0.97 0.95);
+  font-family: Nunito, sans-serif;
+  padding: 2rem 1rem;
+
+  &__form-container {
+    background-color: oklch(95% 0.05 130deg);
+    border-radius: 0.75rem;
+    box-shadow: $box-shadow;
+    container-type: inline-size;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 2rem;
+  }
+
+  &__title {
+    color: hsl(145deg 40% 35%);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .form-label {
+      display: inline-block;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      max-width: 250px;
+      width: 100%;
+    }
+
+    .form-control {
+      display: inline-block;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+      max-width: 350px;
+      width: 100%;
+    }
+  }
+
+  &__submit {
+    align-items: center;
+    background-color: hsl(145deg 60% 40%);
+    border: none;
+    border-radius: 50px;
+    display: inline-flex;
+    font-weight: 600;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: hsl(145deg 99% 50%);
+    }
+  }
+
+  @container (min-width: 600px) {
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+}
