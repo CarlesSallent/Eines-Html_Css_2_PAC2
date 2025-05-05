@@ -25,15 +25,10 @@
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
-@import "abstracts/variables";
-@import "abstracts/mixins";
-@import "base/reset";
-@import "base/typography";
+
 @import "base/base";
 @import "layout/header";
 @import "layout/footer";
-@import "components/button";
-@import "components/card";
 @import "pages/home";
 @import "pages/participants";
 @import "pages/noticia";
